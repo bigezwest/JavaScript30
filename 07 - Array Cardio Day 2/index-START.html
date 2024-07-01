@@ -27,11 +27,9 @@
 
     // Some and Every Checks
     // Array.prototype.some() // is at least one person 19 or older?
-    const hasNineteen = people.some(function(element) {
+    const hasNineteen = people.some(element  => {
       const year = (new Date()).getFullYear();
-      if (year - element.year >= 19) {
-        return true;
-      }
+      return (year - element.year >= 19)
     });
     console.log({hasNineteen});
 
